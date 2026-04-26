@@ -197,7 +197,7 @@ function formatDate(key, lang) {
   return lang === "en" ? `${m}/${d}` : `${m}/${d}`;
 }
 
-const GEMINI_API_KEY = "";
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || "";
 
 async function callGemini(prompt) {
   const res = await fetch(
